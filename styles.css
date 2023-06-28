@@ -1,0 +1,123 @@
+:root {
+    --SoftBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --veryDarkBlueM: hsl(217, 54%, 11%); /* (main BG) */
+    --veryDarkBlueC: hsl(216, 50%, 16%); /* (card BG) */
+    --veryDarkBlueL: hsl(215, 32%, 27%); /* (line) */
+    --white: hsl(0, 0%, 100%);
+
+    --cyanT: hsla(178, 100%, 50%, 0.5);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: var(--veryDarkBlueM);
+    justify-content: center;
+    min-height: 100vh;
+}
+main {
+    background-color: var(--veryDarkBlueC);
+    border-radius: 12px;
+    padding: 25px 24px;
+    cursor: pointer;
+    height: 545px;
+    width: 328px;
+}
+.imageContainer {
+    margin-bottom: 25px;
+}
+main, .imageContainer {
+    position: relative;
+}
+.subContainer { 
+    background-color: var(--cyanT);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+}
+.mainImage, .subContainer {
+    border-radius: 10px;
+}
+.imageContainer, .subContainer {
+    height: 279px;
+    width: 278px;
+}
+.view {
+    transform: translate(-50%, -50%);
+    inset: 50%;
+}
+.imageContainer:hover .subContainer {
+    transition: 500ms;
+    opacity: 1;
+}
+.words {
+    font-family: 'Outfit', sans-serif;
+    line-height: 30px;
+}
+.textTitle {
+    font-weight: 600;
+    font-size: 22px;
+}
+.text {
+    font-weight: 300;
+}
+.info {
+    border-bottom: 1px var(--veryDarkBlueL) solid;
+    padding: 10px 0;
+}
+body, .info {
+    align-items: center;
+}
+.ethereumImg {
+    width: 10px;
+}
+.number {
+    color: var(--cyan);
+    font-weight: 400;
+    font-size: 14px;
+    flex: 70%;
+}
+.imgClock {
+    width: 18px;
+}
+.ethereumImg, .imgClock {
+    height: 18px;
+}
+.time {
+    font-size: 15px;
+    flex: 30%;
+}
+.number, .time {
+    margin-left: 5px;
+}
+.cardFooter {
+    bottom: 14px;
+}
+body, .info, .cardFooter {
+    display: flex;
+}
+.view, .cardFooter {
+    position: absolute;
+}
+.imgAvatar {
+    border: 1px var(--white) solid;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+.extraInfo {
+    margin: 0px 0px 10px 15px;
+}
+.text, .time, .extraInfo {
+    color: var(--SoftBlue);
+}
+.textTitle, .creatorName {
+    color: var(--white);
+}
+.textTitle:hover, .creatorName:hover {
+    color: var(--cyan);
+}
